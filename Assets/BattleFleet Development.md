@@ -71,6 +71,10 @@
 ### <input type="checkbox" checked> Refactor AI character preview in roaming
 ### <input type="checkbox" checked> Refactor Players to use a base class for common logic
 ### <input type="checkbox" checked> Refactor Game Modes to use a base class for common logic
+### <input type="checkbox" checked> Refactor non-fleet group ship to populate DT_npcships
+### <input type="checkbox" checked> Fix npc using destroyed ship for next ship
+### <input type="checkbox" checked> Remove defeated npc from Overspace Location spawning
+### <input type="checkbox" > Fix XP bar to show current XP on load
 
 ## Roaming Mode
 ### <input type="checkbox" checked> Setup Basic Dialogue System for Characters
@@ -94,54 +98,120 @@
 ### <input type="checkbox" checked> Setup repair ships in Fleet
 ### <input type="checkbox" checked> Setup crafting schemas
 ### <input type="checkbox" checked> Setup crafting multiple items from schema
-### <input type="checkbox" > Setup procedural Character Dialogue Icons
-### <input type="checkbox" > Fix bug with Officer outline
+### <input type="checkbox" checked> Setup procedural Character Dialogue Icons
+### <input type="checkbox" checked> Fix bug with Officer outline
+### <input type="checkbox" checked> Research 2 weapon parts
+### <input type="checkbox" checked> Flesh out resources, parts, blueprints for 2 weapon parts
+### <input type="checkbox" checked> Refactor Inventory save to only updated inventory categories
+### <input type="checkbox" checked> Refactor Inventory to include Weapon category
+### <input type="checkbox" checked> Setup hangar menu (weapons equip)
+### <input type="checkbox" > Setup Officer assigning in hangar menu
+### <input type="checkbox" > Refactor saving inventory in BP_Character to save sequential indexes (Save Inventory)
+### <input type="checkbox" checked> Refactor saving inventory in W_InventoryCategory, W_FleetStatus to use Game Mode Core Logic saving inventory
+### <input type="checkbox" checked> Refactor saving ships in BP_RoamingCharacter, W_FleetStatus, BP_BattlePlayer to Game Mode Core Logic saving ships
+### <input type="checkbox" checked> Refactor saving officers to Game Mode Core Logic saving officers
+### <input type="checkbox" checked> Refactor saving officer name to Game Mode Core Logic saving officer name
+### <input type="checkbox" checked> Refactor saving customizations to Game Mode Core Logic saving customizations
+### <input type="checkbox" checked> Refactor saving overspace player locations to Game Mode Core Logic saving overspace player locations
+### <input type="checkbox" > Refactor removing inventory items in BP_Character to Game Mode Core Logic removing inventory items
+### <input type="checkbox" checked> Setup leaving station
+### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)
+
+
+## Overspace (Exploration) Mode
+### <input type="checkbox" checked> Create pawn for overspace game mode
+### <input type="checkbox" checked> Create AI pawn for overspace game mode
+### <input type="checkbox" checked> Allow AI Evasion
+### <input type="checkbox" checked> Allow AI to engage in Battle Mode
+### <input type="checkbox" checked> Setup Station docking
+### <input type="checkbox" checked> Setup saving Overspace layout to reload
+### <input type="checkbox" checked> Refactor NPC Fleets to group by NPC Name
+### <input type="checkbox" checked> Setup Basic NPC procedurally generated spawning
+### <input type="checkbox" checked> Add radar
+### <input type="checkbox" checked> Refactor BP_DockBase to not inherit from BP_CharacterCoreLogic (see BP_ExitBase)
+### <input type="checkbox" checked> Add multiple types of npc fleets (Hostile/Passive/Cowardly)
+### <input type="checkbox" checked> Add Friend/Enemy/Unknown HUD tagging
+### <input type="checkbox" checked> Refactor radar for tracking large stationary objects
+### <input type="checkbox" checked> Change radar indicators based on perceived threat
+### <input type="checkbox" checked> Add scanner info for Overspace Player Target
+### <input type="checkbox" checked> Add scanner schema info for scanned object
+### <input type="checkbox" checked> Refactor Scanner Schema Info into Scanner Info
+### <input type="checkbox" checked> Refactor Scanner Schema Info to check Codex for discovered entries
+### <input type="checkbox" checked> Add Codex entry for ships after encounter with ship
+### <input type="checkbox" checked> Refactor scanner to clear when scanning new target
+### <input type="checkbox" checked> Refactor HUD Marker to resize on target
+### <input type="checkbox" checked> Add scanner info for Overspace Docking Target
+### <input type="checkbox" checked> Add Codex entry for bases after encounter with base
+### <input type="checkbox" checked> Add POI Marker in Planet Menu
+### <input type="checkbox" checked> Add planet menu for selecting POI
+### <input type="checkbox" checked> Add planet scanning
+### <input type="checkbox" checked> Add mission menu for selecting mission POI
+### <input type="checkbox" checked> Add basic mission execution using mission events
+### <input type="checkbox" checked> Add diminishing chance to occur for repeating mission events
+### <input type="checkbox" checked> Add health for Officers
+### <input type="checkbox" checked> Add event consequences
+### <input type="checkbox" checked> Add event report showing summary of events and outcomes
+### <input type="checkbox" checked> Refactor Add Inventory item from BP_Character to GM Core Logic
+### <input type="checkbox" checked> Save mission event consequences on mission finish
+### <input type="checkbox" > Add POI degredation or single attempt
+### <input type="checkbox" > Add Codex entry for Codex POI
+### <input type="checkbox" checked> Add Trader event to spawn trader
+### <input type="checkbox" checked> Add Trade menu to Overspace player
+### <input type="checkbox" > Fix intermitent Trader engaging with target
+### <input type="checkbox" checked> Add Abandoned Cargo event
+### <input type="checkbox" > Add Cargo Container(s) after battle
 
 # Action Items
 
 ## Exploration
 > ## Star Systems
 >> ## Planets
->> ##### Bases can be located on a planet
->> ##### Explorable points of interest can be located on a planet
->> ##### Several expeditions can be located on a single planet
+>> ##### Bases can be located on a planet (Done)
+>> ##### Explorable points of interest can be located on a planet (Done)
+>> ##### Several expeditions can be located on a single planet (Done)
 >>> ## Expeditions
 >>> ##### Inspiration from Crying Suns away missions
 >>> ##### Viewed from bridge of *flagship*
->>> ##### Monitors reports from away team
+>>> ##### Monitors reports from away team (Done)
 >>> ##### Field Report Scan shows items of interest in forming an away mission, including:
->>> - ###### Points of Interest in area
->>> - ###### Points of Danger in area
+>>> - ###### Points of Interest in area (Done)
+>>> - ###### Points of Danger in area (Done)
 >>> - ###### Objectives
->>> ##### Shows probability report on away team's success, which includes:
->>> - ###### Officer survival chance
->>> - ###### Resources extraction chance
->>> - ###### Crew survival chance
+>>> ##### Instead of showing probabilities, focus on highlighting POIs and PODs:
+>>> - ###### Mineral Deposits (POI - Geologist/Scavenger) (Done)
+>>> - ###### (Medical, Military, Geological, etc.) Facility (POI/POD - Geologist/Demo/Technician/Linguist/Researcher/Scavenger/Trader/Mechanic)
+>>> - ###### (Mercenary, Military, Pirate*) Forces (POD - Medic/Weapon/Scout/Linguist/Tactician/Trader)
+>>> - ###### (Local, Refugee, Nomadic, Abandoned) Settlement (POI/POD - Medic/Weapon/Scout/Linguist/Researcher/Scavenger/Tactician/Trader/Mechanic)
+>>> - ###### (Derelict, Damaged, Abandoned) Ship (POI/POD - Medic/Demo/Tech/Weapon/Scout/Linguist/Researcher/Scavenger/Tactician/Trader/Mechanic)
+>>> ##### ~~Shows probability report on away team's success, which includes:~~
+>>> - ###### ~~Officer survival chance~~
+>>> - ###### ~~Resources extraction chance~~
+>>> - ###### ~~Crew survival chance~~
 >>> ##### Semi-random events that test away team's skillset
 >>> ##### Can find the following items:
 >>> - ###### New Officer to recruit
 >>> - ###### New Crew to add to ship
->>> - ###### Raw resources to add to cargo hold
->>> - ###### Ship parts to add to cargo hold
+>>> - ###### Raw resources to add to cargo hold (Done)
+>>> - ###### Ship parts to add to cargo hold (Done)
 >>> - ###### Ship Part blueprints to add to Starship Compendium
 >>> - ###### Mission specific items to add to cargo hold
 >>> - ###### Ship blueprints to add to Starship Compendium
 >>> ##### Expeditions can be randomly generated or story specific
 >>> ##### Up to 2 Officers can be assigned to an away mission
->>> ##### Can extract away team at different expedition checkpoints
+>>> ##### ~~Can extract away team at different expedition checkpoints~~
 ><br><br/>
 >> ## Officers
->> ##### Aptitude (Average, Exceptional, Paragon) - max trait slots (2, 3, 4)
->> ##### Traits (Medic, Geologic, Demolition, Technical, Tactical, Reconnaissance, Linguistic, Researcher, Scavenger, Intuitive, Barter, Mechanic)
+>> ##### Aptitude (Average, Exceptional, Paragon) - max trait slots (2, 3, 4) (Done)
+>> ##### Traits (Medic, Geologist, Demolition Specialist, Technician, Weapon Specialist, Scout, Linguist, Researcher, Scavenger, Tactician, Trader, Mechanic) (Done)
 >> ##### Provides event successes if assigned to away party, bonuses if assigned to a ship, bonuses if assigned to a shoreleave party (Ice-box)
 ><br><br/>
 >> ## Bases
 >> ##### Inspiration from Mount & Blade towns
 >> ##### Can be found orbiting Planets or other interstellar bodies
 >> ##### Have alignments to different factions
->> ##### Marketplaces for resources, parts, blueprints, ships, and misc items
->> ##### Can recruit Crew and Officers
->> ##### Can roam the galley to interact with patrons (small character roamable room)
+>> ##### Marketplaces for resources, parts, blueprints, ships, and misc items (Done)
+>> ##### Can recruit Crew and Officers (Done)
+>> ##### Can roam the galley to interact with patrons (small character roamable room) (Done)
 >> ##### Can change faction alignment* (Galactic Conquest Ice-box)
 >> ##### Can engage in Battles* (Galactic Conquest Ice-box)
 >> ##### Can generate resources for owner* (Galactic Conquest Ice-box)
@@ -158,7 +228,7 @@
 >> ##### Decrypted messages
 >> ##### Nebula
 >> ##### Asteroid Field
->> ##### Trader
+>> ##### Trader (Done)
 >> ##### Space storm
 
 References:

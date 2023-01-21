@@ -75,6 +75,7 @@
 ### <input type="checkbox" checked> Fix npc using destroyed ship for next ship
 ### <input type="checkbox" checked> Remove defeated npc from Overspace Location spawning
 ### <input type="checkbox" > Fix XP bar to show current XP on load
+### <input type="checkbox" > Add Player Fleet defeat (Last ship is critically damaged)
 
 ## Roaming Mode
 ### <input type="checkbox" checked> Setup Basic Dialogue System for Characters
@@ -113,9 +114,11 @@
 ### <input type="checkbox" checked> Refactor saving officer name to Game Mode Core Logic saving officer name
 ### <input type="checkbox" checked> Refactor saving customizations to Game Mode Core Logic saving customizations
 ### <input type="checkbox" checked> Refactor saving overspace player locations to Game Mode Core Logic saving overspace player locations
-### <input type="checkbox" > Refactor removing inventory items in BP_Character to Game Mode Core Logic removing inventory items
+### <input type="checkbox" checked> Refactor removing inventory items in BP_Character to Game Mode Core Logic removing inventory items
 ### <input type="checkbox" checked> Setup leaving station
-### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)
+### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)### <input type="checkbox" checked> Add Dev panel for adding NPCs with customizations and inventory
+### <input type="checkbox" > Add option to remove NPC in NPC Dev panel
+### <input type="checkbox" > Add Landing Zone POI for Planets (Hangar) - Happens when Overspace Player is defeated (Last ship is critically damaged)
 
 
 ## Overspace (Exploration) Mode
@@ -159,7 +162,17 @@
 ### <input type="checkbox" checked> Add Trade menu to Overspace player
 ### <input type="checkbox" > Fix intermitent Trader engaging with target
 ### <input type="checkbox" checked> Add Abandoned Cargo event
-### <input type="checkbox" > Add Cargo Container(s) after battle
+### <input type="checkbox" > ~~Add Cargo Container(s) after battle? Or~~ Add reward items to inventory at end of battle
+### <input type="checkbox" checked> Refactor Player/NPC inventory to only include fields that change
+### <input type="checkbox" checked> Add boost to Overspace Player
+### <input type="checkbox" checked> Add Derelict Ship anomaly
+### <input type="checkbox" checked> Add Mission Tracker
+### <input type="checkbox" > Add Sector Map
+### <input type="checkbox" > Refactor NPC spawning to factor in boost
+### <input type="checkbox" > Add Hostile Zone (Hostile NPC intercepting)
+### <input type="checkbox" > Add Hazard Passage
+### <input type="checkbox" > Add officer from mission outcome
+
 
 # Action Items
 
@@ -224,12 +237,40 @@
 >> ##### Derelict ships/bases
 >> ##### Secret ships/bases
 >> ##### Ambushes
->> ##### Abandoned cargo
+>> ##### Abandoned cargo (Done)
 >> ##### Decrypted messages
 >> ##### Nebula
 >> ##### Asteroid Field
 >> ##### Trader (Done)
 >> ##### Space storm
+
+## Vertical Slice
+### - Discover a derelict ship
+### - Receive mission to rescue officer
+### - View sector map to locate mission objective
+### - Navigate towards mission objective (could encounter generated events)
+### - Mission objective is located in hostile zone, will encounter difficult enemy that destroys fleet
+### - Fleet crash lands on nearby planet
+### - Away teams (with Fleet Admiral) scavenge POIs for materials to repair fleet
+### - Craft repair parts to repair fleet
+### - Leave planet to enter orbit around planet
+### - (Get information to approach planet through hazard passage)
+### - Approach mission objective through hazard passage
+### - Scan mission objective for POIs
+### - Send away team to complete mission
+### - Rescue officer and assign to fleet
+
+## Verticle Slice needed features
+### - Distress signal anomaly
+### - Mission tracker
+### - Sector map
+### - Refactor NPC spawning to factor in boost
+### - Hostile Zone (Hostile NPC intercepting)
+### - Defeating Player Fleet
+### - Planet Landing Zone
+### - Hazard Passage
+### - Story Mission
+### - Add officer from mission outcome
 
 References:
 

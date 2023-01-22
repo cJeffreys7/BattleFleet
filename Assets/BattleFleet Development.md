@@ -167,7 +167,7 @@
 ### <input type="checkbox" checked> Add boost to Overspace Player
 ### <input type="checkbox" checked> Add Derelict Ship anomaly
 ### <input type="checkbox" checked> Add Mission Tracker
-### <input type="checkbox" > Add Sector Map
+### <input type="checkbox" checked> Add Sector Map
 ### <input type="checkbox" > Refactor NPC spawning to factor in boost
 ### <input type="checkbox" > Add Hostile Zone (Hostile NPC intercepting)
 ### <input type="checkbox" > Add Hazard Passage

@@ -121,7 +121,8 @@
 ### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)### <input type="checkbox" checked> Add Dev panel for adding NPCs with customizations and inventory
 ### <input type="checkbox" > Add option to remove NPC in NPC Dev panel
 ### <input type="checkbox" checked> Add Crash Landing Site for Planets (Hangar) - Happens when Overspace Player is defeated (Last ship is critically damaged)
-### <input type="checkbox" > Add repair option in Crash Landing Site
+### <input type="checkbox" checked> Add repair option in Crash Landing Site
+### <input type="checkbox" > Validate repair option in Crash Landing Site
 
 
 ## Overspace (Exploration) Mode

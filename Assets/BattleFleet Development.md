@@ -75,6 +75,8 @@
 ### <input type="checkbox" checked> Fix npc using destroyed ship for next ship
 ### <input type="checkbox" checked> Remove defeated npc from Overspace Location spawning
 ### <input type="checkbox" > Fix XP bar to show current XP on load
+### <input type="checkbox" checked> Add Player Fleet defeat
+### <input type="checkbox" > Add ship after successful docking to Player Fleet
 ### <input type="checkbox" > Add Player Fleet defeat (Last ship is critically damaged)
 
 ## Roaming Mode
@@ -118,7 +120,8 @@
 ### <input type="checkbox" checked> Setup leaving station
 ### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)### <input type="checkbox" checked> Add Dev panel for adding NPCs with customizations and inventory
 ### <input type="checkbox" > Add option to remove NPC in NPC Dev panel
-### <input type="checkbox" > Add Landing Zone POI for Planets (Hangar) - Happens when Overspace Player is defeated (Last ship is critically damaged)
+### <input type="checkbox" checked> Add Crash Landing Site for Planets (Hangar) - Happens when Overspace Player is defeated (Last ship is critically damaged)
+### <input type="checkbox" > Add repair option in Crash Landing Site
 
 
 ## Overspace (Exploration) Mode

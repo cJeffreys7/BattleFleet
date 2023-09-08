@@ -78,6 +78,7 @@
 ### <input type="checkbox" checked> Add Player Fleet defeat
 ### <input type="checkbox" > Add ship after successful docking to Player Fleet
 ### <input type="checkbox" > Add Player Fleet defeat (Last ship is critically damaged)
+### <input type="checkbox" > Fix NPC avatar display after battle (displaying player avatar instead)
 
 ## Roaming Mode
 ### <input type="checkbox" checked> Setup Basic Dialogue System for Characters
@@ -118,12 +119,17 @@
 ### <input type="checkbox" checked> Refactor saving overspace player locations to Game Mode Core Logic saving overspace player locations
 ### <input type="checkbox" checked> Refactor removing inventory items in BP_Character to Game Mode Core Logic removing inventory items
 ### <input type="checkbox" checked> Setup leaving station
-### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)### <input type="checkbox" checked> Add Dev panel for adding NPCs with customizations and inventory
+### <input type="checkbox" > Fix bug removing all items from category for NPC not using correct JSON syntax (extra comma)
+### <input type="checkbox" checked> Add Dev panel for adding NPCs with customizations and inventory
 ### <input type="checkbox" > Add option to remove NPC in NPC Dev panel
 ### <input type="checkbox" checked> Add Crash Landing Site for Planets (Hangar) - Happens when Overspace Player is defeated (Last ship is critically damaged)
 ### <input type="checkbox" checked> Add repair option in Crash Landing Site
 ### <input type="checkbox" > Validate repair option in Crash Landing Site
-
+### <input type="checkbox" > Fix crew assigned to mission if no crew available
+### <input type="checkbox" > Fix opening inventory menu in hangar (crash landing site), no exit text
+### <input type="checkbox" > Fix exit inventory menu in hangar (crash landing site), not re-entering hangar mode
+### <input type="checkbox" checked> Fix add items to inventory after mission finished (Resources)
+### <input type="checkbox" checked> Fix current focused player/NPC (does not allow for interaction if stuck)
 
 ## Overspace (Exploration) Mode
 ### <input type="checkbox" checked> Create pawn for overspace game mode
@@ -176,6 +182,7 @@
 ### <input type="checkbox" checked> Add Hostile Zone (Hostile NPC intercepting)
 ### <input type="checkbox" > Add Hazard Passage
 ### <input type="checkbox" > Add officer from mission outcome
+### <input type="checkbox" > Fix NPC avatar display after interception (displaying player avatar instead)
 
 
 # Action Items
